@@ -10,13 +10,12 @@ export function ToastProvider({ children }) {
     const toast = {
       id,
       message,
-      type, // 'success', 'error', 'warning', 'info'
+      type,
       duration
     };
 
     setToasts(prev => [...prev, toast]);
 
-    // Auto remove toast after duration
     setTimeout(() => {
       removeToast(id);
     }, duration);
@@ -31,8 +30,6 @@ export function ToastProvider({ children }) {
   const removeAllToasts = useCallback(() => {
     setToasts([]);
   }, []);
-
-  // Convenience methods for different toast types
   const showSuccess = useCallback((message, duration) => {
     return addToast(message, 'success', duration);
   }, [addToast]);
