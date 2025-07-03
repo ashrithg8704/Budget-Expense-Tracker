@@ -8,7 +8,6 @@ function Toast({ toast }) {
   const [isLeaving, setIsLeaving] = useState(false);
 
   useEffect(() => {
-    // Trigger entrance animation
     const timer = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(timer);
   }, []);
@@ -17,7 +16,7 @@ function Toast({ toast }) {
     setIsLeaving(true);
     setTimeout(() => {
       removeToast(toast.id);
-    }, 300); // Match the CSS transition duration
+    }, 300);
   };
 
   const getIcon = () => {
