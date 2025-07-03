@@ -29,7 +29,6 @@ function ExportData() {
     localStorage.setItem('exportStats', JSON.stringify(newStats));
   };
 
-  // Calculate export insights
   const exportInsights = {
     dataSize: transactions.length,
     dateRange: transactions.length > 0 ? {
@@ -267,7 +266,6 @@ function ExportData() {
           </div>
         </div>
 
-        {/* Export Statistics */}
         <div className="export-stats-card">
           <div className="stat-item">
             <Clock size={16} />
@@ -291,7 +289,6 @@ function ExportData() {
         </div>
       </div>
 
-      {/* Data Overview Cards */}
       <div className="data-overview animate-slide-up">
         <div className="overview-card" style={{ animationDelay: '0.1s' }}>
           <div className="overview-icon">
@@ -343,7 +340,6 @@ function ExportData() {
         </div>
       </div>
 
-      {/* Export Options */}
       <div className="export-options animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <div className="export-option">
           <div className="export-card">
@@ -398,7 +394,6 @@ function ExportData() {
         </div>
       </div>
 
-      {/* No Data State */}
       {transactions.length === 0 && (
         <div className="no-data-export animate-fade-in">
           <div className="no-data-icon">
@@ -409,7 +404,6 @@ function ExportData() {
         </div>
       )}
 
-      {/* Security & Privacy */}
       <div className="security-info animate-fade-in" style={{ animationDelay: '0.6s' }}>
         <div className="security-header">
           <Shield size={20} />
