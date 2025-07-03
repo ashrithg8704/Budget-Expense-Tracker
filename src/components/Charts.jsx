@@ -33,7 +33,7 @@ function Charts() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Filter transactions based on selected period
+
   const filteredTransactions = useMemo(() => {
     if (selectedPeriod === 'all') return transactions;
 
@@ -63,7 +63,6 @@ function Charts() {
     return transactions.filter(t => new Date(t.date) >= filterDate);
   }, [transactions, selectedPeriod]);
 
-  // Enhanced analytics calculations
   const analyticsData = useMemo(() => {
     const expensesByCategory = {};
     const incomeByCategory = {};
@@ -183,7 +182,6 @@ function Charts() {
     };
   }, [analyticsData]);
 
-  // Monthly trend data
   const monthlyTrendData = useMemo(() => {
     const { monthlyData } = analyticsData;
     const months = Object.keys(monthlyData).sort();
@@ -305,7 +303,6 @@ function Charts() {
           </div>
         </div>
 
-        {/* Period Filter */}
         <div className="period-filter">
           <label>Time Period:</label>
           <select
@@ -323,7 +320,6 @@ function Charts() {
         </div>
       </div>
 
-      {/* Key Metrics Cards */}
       <div className="metrics-cards animate-slide-up">
         <div className="metric-card income" style={{ animationDelay: '0.1s' }}>
           <div className="metric-icon">
@@ -376,7 +372,6 @@ function Charts() {
         </div>
       </div>
 
-      {/* Charts Grid */}
       <div className="charts-grid animate-fade-in" style={{ animationDelay: '0.5s' }}>
         {hasExpenses && (
           <div className="chart-container">
@@ -405,7 +400,6 @@ function Charts() {
         </div>
       </div>
 
-      {/* Insights Section */}
       <div className="insights-section animate-fade-in" style={{ animationDelay: '0.6s' }}>
         <div className="section-header">
           <Award size={20} />
