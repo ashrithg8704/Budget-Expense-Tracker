@@ -6,10 +6,8 @@ describe('Personal Finance Tracker', () => {
   it('renders the main application', () => {
     render(<App />);
     
-    // Check if the main title is present
     expect(screen.getByText('Personal Finance Tracker')).toBeInTheDocument();
     
-    // Check if navigation tabs are present
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
     expect(screen.getByText('Add Transaction')).toBeInTheDocument();
     expect(screen.getByText('Transactions')).toBeInTheDocument();
