@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,6 @@ html, body {
   width: 100%;
 }
 
-/* App Layout */
 .app {
   min-height: 100vh;
   height: 100%;
@@ -104,9 +103,6 @@ html, body {
   gap: 2rem;
 }
 
-
-
-/* Enhanced Navigation */
 .app-nav {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   border-bottom: 1px solid #e2e8f0;
@@ -195,17 +191,15 @@ html, body {
   }
 }
 
-/* Main Content */
 .app-main {
   flex: 1;
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  min-height: 0; /* Allow flex child to shrink */
+  min-height: 0;
 }
 
-/* Enhanced View Toggle */
 .view-toggle {
   display: flex;
   flex-direction: column;
@@ -264,7 +258,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Page Transition Animations */
 .page-container {
   position: relative;
   width: 100%;
@@ -292,7 +285,6 @@ html, body {
   }
 }
 
-/* Dashboard Animations */
 .animate-slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -333,7 +325,6 @@ html, body {
   }
 }
 
-/* Enhanced Dashboard */
 .dashboard-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -381,7 +372,6 @@ html, body {
   font-size: 0.9rem;
 }
 
-/* Enhanced Financial Cards */
 .financial-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -533,7 +523,6 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Budget Edit */
 .budget-edit {
   display: flex;
   flex-direction: column;
@@ -591,7 +580,6 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Enhanced Budget Progress Section */
 .budget-progress-section {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 20px;
@@ -741,7 +729,6 @@ html, body {
   color: #ef4444;
 }
 
-/* Dashboard Insights */
 .dashboard-insights {
   margin-bottom: 3rem;
 }
@@ -806,7 +793,6 @@ html, body {
   font-style: italic;
 }
 
-/* Recent Activity */
 .recent-activity {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 20px;
@@ -913,7 +899,6 @@ html, body {
   }
 }
 
-/* Enhanced Dashboard Responsive Design */
 @media (max-width: 1200px) {
   .dashboard-container {
     padding: 1.5rem;
@@ -1068,7 +1053,6 @@ html, body {
   }
 }
 
-/* Enhanced Transaction Form */
 .transaction-form-container {
   max-width: 800px;
   margin: 0 auto;
@@ -1083,7 +1067,6 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Header Section */
 .form-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -1133,7 +1116,6 @@ html, body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Type Toggle Section */
 .type-toggle-section {
   padding: 2rem;
   background: #f8fafc;
@@ -1184,7 +1166,6 @@ html, body {
   box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
 }
 
-/* Form Content */
 .form-content {
   padding: 2rem;
 }
@@ -1207,7 +1188,6 @@ html, body {
   font-weight: 600;
 }
 
-/* Amount Input */
 .amount-input-container {
   position: relative;
   display: flex;
@@ -1245,14 +1225,12 @@ html, body {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-/* Form Row */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-/* Select Container */
 .select-container {
   position: relative;
 }
@@ -1280,7 +1258,6 @@ html, body {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Regular Input */
 .form-section input[type="text"],
 .form-section input[type="date"] {
   width: 100%;
@@ -1305,7 +1282,6 @@ html, body {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-/* Error Messages */
 .error-message {
   color: #ef4444;
   font-size: 0.875rem;
@@ -1316,7 +1292,6 @@ html, body {
   font-weight: 500;
 }
 
-/* Action Buttons */
 .form-actions {
   display: flex;
   gap: 1rem;
@@ -1388,7 +1363,6 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* Form Tips */
 .form-tips {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   padding: 1.5rem 2rem;
@@ -1425,7 +1399,6 @@ html, body {
   font-weight: bold;
 }
 
-/* Enhanced Transaction Form Responsive Design */
 @media (max-width: 768px) {
   .transaction-form-container {
     padding: 0.5rem;
@@ -1533,13 +1506,6 @@ html, body {
   }
 }
 
-/* Legacy Budget Calculator Styles - Removed to avoid conflicts */
-
-/* Legacy Budget Progress Styles - Removed to avoid conflicts */
-
-/* Legacy Budget Tips Styles - Removed to avoid conflicts */
-
-/* Enhanced Transaction List */
 .transaction-list-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1554,7 +1520,6 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Header Section */
 .list-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -1616,7 +1581,6 @@ html, body {
   margin-top: 0.25rem;
 }
 
-/* Enhanced Filters Section */
 .filters-section {
   background: #f8fafc;
   border-bottom: 1px solid #e2e8f0;
@@ -1666,7 +1630,6 @@ html, body {
   padding: 0 2rem 2rem 2rem;
 }
 
-/* Search Container */
 .search-container {
   margin-bottom: 1.5rem;
 }
@@ -1701,7 +1664,6 @@ html, body {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Filter Controls */
 .filter-controls {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1720,7 +1682,6 @@ html, body {
   color: #374151;
 }
 
-/* Type Filter Buttons */
 .type-filter-buttons {
   display: flex;
   gap: 0.5rem;
@@ -1764,7 +1725,6 @@ html, body {
   border-color: #ef4444;
 }
 
-/* Category Select */
 .category-select {
   padding: 0.75rem;
   border: 2px solid #e5e7eb;
@@ -1781,7 +1741,6 @@ html, body {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Date Range Inputs */
 .date-range-inputs {
   display: flex;
   align-items: center;
@@ -1810,12 +1769,10 @@ html, body {
   font-weight: 500;
 }
 
-/* Enhanced Transactions Section */
 .transactions-section {
   padding: 2rem;
 }
 
-/* No Transactions State */
 .no-transactions {
   text-align: center;
   padding: 4rem 2rem;
@@ -1855,14 +1812,12 @@ html, body {
   background: #5a67d8;
 }
 
-/* Transactions Grid */
 .transactions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1.5rem;
 }
 
-/* Transaction Card */
 .transaction-card {
   background: white;
   border-radius: 16px;
@@ -1886,7 +1841,6 @@ html, body {
   border-left: 4px solid #ef4444;
 }
 
-/* Transaction Header */
 .transaction-header {
   display: flex;
   align-items: center;
@@ -1931,7 +1885,6 @@ html, body {
   color: #ef4444;
 }
 
-/* Transaction Actions */
 .transaction-actions {
   display: flex;
   gap: 0.5rem;
@@ -1962,7 +1915,6 @@ html, body {
   color: #ef4444;
 }
 
-/* Transaction Body */
 .transaction-body {
   padding: 0 1.5rem 1.5rem 1.5rem;
 }
@@ -2090,7 +2042,6 @@ html, body {
   background: rgba(244, 67, 54, 0.1);
 }
 
-/* Enhanced Delete Confirmation Modal */
 .delete-confirmation-overlay {
   position: absolute;
   top: 0;
@@ -2183,7 +2134,6 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* Enhanced Transaction List Responsive Design */
 @media (max-width: 768px) {
   .transaction-list-container {
     padding: 0.5rem;
@@ -2322,7 +2272,6 @@ html, body {
   }
 }
 
-/* Enhanced Analytics Page */
 .analytics-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -2391,7 +2340,6 @@ html, body {
   color: #374151;
 }
 
-/* Metrics Cards */
 .metrics-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2492,7 +2440,6 @@ html, body {
   color: #64748b;
 }
 
-/* Enhanced Charts Grid */
 .charts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -2546,7 +2493,6 @@ html, body {
   position: relative;
 }
 
-/* No Data States */
 .no-data-analytics {
   text-align: center;
   padding: 4rem 2rem;
@@ -2570,7 +2516,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* Analytics Insights Section */
 .insights-section {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 20px;
@@ -2659,7 +2604,6 @@ html, body {
   font-style: italic;
 }
 
-/* Enhanced Export Page */
 .export-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -2733,7 +2677,6 @@ html, body {
   font-weight: 600;
 }
 
-/* Data Overview Cards */
 .data-overview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2787,7 +2730,6 @@ html, body {
   color: #64748b;
 }
 
-/* Export Options */
 .export-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -2900,7 +2842,6 @@ html, body {
   box-shadow: none;
 }
 
-/* No Data Export */
 .no-data-export {
   text-align: center;
   padding: 4rem 2rem;
@@ -2924,7 +2865,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* Security Info */
 .security-info {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   border-radius: 16px;
@@ -2961,7 +2901,6 @@ html, body {
   font-weight: 500;
 }
 
-/* Analytics & Export Responsive Design */
 @media (max-width: 1200px) {
   .analytics-container,
   .export-container {
@@ -3100,7 +3039,6 @@ html, body {
   }
 }
 
-/* Enhanced Header & Navigation Responsive Design */
 @media (max-width: 768px) {
   .app-header {
     padding: 1rem;
@@ -3184,7 +3122,6 @@ html, body {
   }
 }
 
-/* Chart Summary */
 .chart-summary {
   background: #f8f9ff;
   padding: 1.5rem;
@@ -3223,7 +3160,6 @@ html, body {
   color: #333;
 }
 
-/* Toast Notifications */
 .toast-container {
   position: fixed;
   top: 20px;
@@ -3325,7 +3261,6 @@ html, body {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile toast adjustments */
 @media (max-width: 480px) {
   .toast-container {
     top: 10px;
@@ -3339,7 +3274,6 @@ html, body {
   }
 }
 
-/* Export Data */
 .export-data {
   background: white;
   padding: 2rem;
@@ -3456,7 +3390,6 @@ html, body {
   font-weight: bold;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .app-header {
     padding: 1rem;
