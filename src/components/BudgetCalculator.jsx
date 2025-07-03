@@ -23,7 +23,6 @@ function BudgetCalculator() {
     balance: 0
   });
 
-  // Animate numbers on mount and when values change
   useEffect(() => {
     const animateValue = (start, end, duration, callback) => {
       const startTime = Date.now();
@@ -148,7 +147,6 @@ function BudgetCalculator() {
         </div>
       </div>
 
-      {/* Main Financial Cards */}
       <div className="financial-cards">
         <div className="financial-card income animate-slide-up">
           <div className="card-header">
@@ -257,7 +255,6 @@ function BudgetCalculator() {
         </div>
       </div>
 
-      {/* Budget Progress Section */}
       {budget > 0 && (
         <div className="budget-progress-section animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <div className="section-header">
@@ -304,7 +301,6 @@ function BudgetCalculator() {
         </div>
       )}
 
-      {/* Insights and Analytics */}
       <div className="dashboard-insights animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <div className="insights-grid">
           <div className="insight-card">
@@ -351,7 +347,6 @@ function BudgetCalculator() {
         </div>
       </div>
 
-      {/* Recent Activity */}
       {recentTransactions.length > 0 && (
         <div className="recent-activity animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="section-header">
