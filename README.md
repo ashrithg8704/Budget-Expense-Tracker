@@ -126,5 +126,3 @@ src/
 - `date-fns` - Date manipulation utilities
 - `lucide-react` - Icon library
 - `vite` - Build tool and dev server
-
-Built with ❤️ using React and modern web technologies.
