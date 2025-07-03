@@ -129,7 +129,6 @@ function TransactionList({ onEditTransaction }) {
           </div>
         </div>
 
-        {/* Filter Section */}
         <div className="filters-section">
           <div className="filters-header">
             <div className="filters-title">
@@ -156,7 +155,6 @@ function TransactionList({ onEditTransaction }) {
               </div>
             </div>
 
-            {/* Filter Controls */}
             <div className="filter-controls">
               <div className="filter-group">
                 <label>Transaction Type</label>
@@ -228,7 +226,6 @@ function TransactionList({ onEditTransaction }) {
           </div>
         </div>
 
-        {/* Transactions List */}
         <div className="transactions-section">
           {filteredTransactions.length === 0 ? (
             <div className="no-transactions">
@@ -296,7 +293,6 @@ function TransactionList({ onEditTransaction }) {
                     </div>
                   </div>
 
-                  {/* Delete Confirmation Modal */}
                   {showDeleteConfirm === transaction.id && (
                     <div className="delete-confirmation-overlay">
                       <div className="delete-confirmation">
