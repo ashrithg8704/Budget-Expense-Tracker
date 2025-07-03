@@ -2,7 +2,6 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 const FinanceContext = createContext();
 
-// Action types
 const ACTIONS = {
   ADD_TRANSACTION: 'ADD_TRANSACTION',
   UPDATE_TRANSACTION: 'UPDATE_TRANSACTION',
@@ -13,13 +12,11 @@ const ACTIONS = {
   SET_FILTER: 'SET_FILTER'
 };
 
-// Default categories
 const DEFAULT_CATEGORIES = {
   income: ['Salary', 'Freelance', 'Investment', 'Gift', 'Other Income'],
   expense: ['Food', 'Transportation', 'Housing', 'Utilities', 'Entertainment', 'Healthcare', 'Shopping', 'Education', 'Other Expense']
 };
 
-// Initial state
 const initialState = {
   transactions: [],
   budget: 0,
@@ -33,7 +30,6 @@ const initialState = {
   categories: DEFAULT_CATEGORIES
 };
 
-// Reducer function
 function financeReducer(state, action) {
   switch (action.type) {
     case ACTIONS.ADD_TRANSACTION:
@@ -84,12 +80,9 @@ function financeReducer(state, action) {
       return state;
   }
 }
-
-// Context Provider
 export function FinanceProvider({ children }) {
   const [state, dispatch] = useReducer(financeReducer, initialState);
 
-  // Load data from localStorage on mount
   useEffect(() => {
     const savedData = localStorage.getItem('financeTrackerData');
     if (savedData) {
@@ -103,7 +96,6 @@ export function FinanceProvider({ children }) {
     }
   }, []);
 
-  // Save data to localStorage whenever transactions or budget change
   useEffect(() => {
     const dataToSave = {
       transactions: state.transactions,
@@ -112,7 +104,6 @@ export function FinanceProvider({ children }) {
     localStorage.setItem('financeTrackerData', JSON.stringify(dataToSave));
   }, [state.transactions, state.budget]);
 
-  // Action creators
   const addTransaction = (transaction) => {
     dispatch({ type: ACTIONS.ADD_TRANSACTION, payload: transaction });
   };
@@ -137,7 +128,6 @@ export function FinanceProvider({ children }) {
     dispatch({ type: ACTIONS.SET_FILTER, payload: filterUpdates });
   };
 
-  // Calculated values
   const totalIncome = state.transactions
     .filter(t => t.type === 'income')
     .reduce((sum, t) => sum + t.amount, 0);
@@ -170,7 +160,6 @@ export function FinanceProvider({ children }) {
   );
 }
 
-// Custom hook to use the context
 export function useFinance() {
   const context = useContext(FinanceContext);
   if (!context) {
