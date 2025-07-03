@@ -17,7 +17,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
 
   const [errors, setErrors] = useState({});
 
-  // Populate form when editing
   useEffect(() => {
     if (editingTransaction) {
       setFormData({
@@ -37,7 +36,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
       [name]: value
     }));
 
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -45,7 +43,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
       }));
     }
 
-    // Reset category when type changes
     if (name === 'type') {
       setFormData(prev => ({
         ...prev,
@@ -100,7 +97,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
         showSuccess(`Transaction added successfully! ${transactionData.type === 'income' ? '+' : '-'}$${transactionData.amount.toFixed(2)} for ${transactionData.description}`);
       }
 
-      // Reset form
       setFormData({
         type: 'expense',
         amount: '',
@@ -155,7 +151,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
           )}
         </div>
 
-        {/* Transaction Type Toggle */}
         <div className="type-toggle-section">
           <div className="type-toggle">
             <button
@@ -201,7 +196,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
             {errors.amount && <span className="error-message">{errors.amount}</span>}
           </div>
 
-          {/* Category and Description Row */}
           <div className="form-row">
             <div className="form-section">
               <div className="section-header">
@@ -245,7 +239,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
             </div>
           </div>
 
-          {/* Date Section */}
           <div className="form-section">
             <div className="section-header">
               <Calendar size={18} />
@@ -262,7 +255,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
             {errors.date && <span className="error-message">{errors.date}</span>}
           </div>
 
-          {/* Action Buttons */}
           <div className="form-actions">
             <button type="submit" className={`submit-btn ${formData.type}`}>
               <Save size={18} />
@@ -292,7 +284,6 @@ function TransactionForm({ editingTransaction, onCancel }) {
           </div>
         </form>
 
-        {/* Quick Tips */}
         <div className="form-tips">
           <h4>💡 Quick Tips</h4>
           <ul>
