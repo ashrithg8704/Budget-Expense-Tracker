@@ -1,4 +1,4 @@
-# Personal Finance Tracker
+# Budget Expense Tracker
 
 A comprehensive React-based personal finance tracker to manage income and expenses with advanced features for budgeting, analytics, and data export.
 
